@@ -2,6 +2,8 @@
 # **BTK - Huawei Kodlama Maratonu (2022 - AI)** 
 ## **Yapay zeka kullanarak uydu görüntüsünü segmentlere ayırma projesi**
 
+![donusum.png](https://github.com/omersavas26/SataliteImageSegmantation/raw/main/donusum.png)
+
 # **Önemli Açıklama**
 Kaggle da geliştirme yapmaya çalışırken karşılaştığım problemleri discord grubundan paylaşmıştım. Alp bey ile yaptığım ekran paylaşımında kendisine de durumu gösterdim. En büyük problem runtime ‘ı GPU ya geçirememekti. CPU üzerinde çalışırken de aynı kodun farklı notebook ‘lar da çalışmaması gibi tutarsızlıklar tespit ettim. En sonun da (1 günüme malolsa da) Alp beyin de bilgisi dahilinde Google Colab ortamında çalışmaya başladım. Bu proje Google Colab ortamı kullanılarak geliştirilmiştir.
 
@@ -51,15 +53,15 @@ autoencoder = Model(input_img, decoded)
 autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy')
 ```
 
-![autoencoderminimodelpredict.jpg](https://omersavas.com/dosya/autoencoderminimodelpredict.jpg)
+![autoencoderminimodelpredict.jpg](https://omersavas.com/dosya/huawei/autoencoderminimodelpredict.jpg)
 
 Ardından kaynak 2 de belirtilen model incelenmiş ve bizim mini autoencoderimiz ve kaynaktaki modelin arasında bir derinlik seçilmiştir. Bazı katmanlar sadeleştirilerek aşağıda özeti ve diagram resmi çizilmiş olan modelde karar kılınmıştır. Bu model yine bir kaç epoch eğitimden geçirildikten sorna önceki modelden çok daha başarılı olacağı aşağıdaki resimden de anlaşılmaktadır.
 
-![derinmodel](https://omersavas.com/dosya/derinmodel.jpg)
+![derinmodel](https://omersavas.com/dosya/huawei/model.png)
 
 Sonuç olarak eğitim gerçekleştirilmiş ve grafikler aşağıdadır. Donanım kaynağının yetersizliği sebebiyle eğitim küçük bir veri seti ile gerçekleştirilmiştir. Bu da ilerleyen iterasyonlarda bir miktar aşırı öğrenme yaptır. Eğer daha büyük veri seti ve daha derin ağ ile eğitim gerçekleştirilir ise doğruluk performansının artacağı düşünülmektedir.
 
-![grafik](https://omersavas.com/dosya/grafik.jpg)
+![grafik](https://omersavas.com/dosya/huawei/acc.png)
 
 #### **Veri kümesinde hangi veri ön işleme adımlarını uyguladınız? **
 Veri okuma, formatlama, normalize etme gibi işlemler read_images() fonksiyonu içerisinde gerçekleştirildi. Önce jp2 uzantılı uydu görüntüleri RGB ye çevirildi. Ardından numpy dizisine dönüştürülüp /255 e bölündü. .tif uzantılı segment dosyaları da tek kanal olarak okunduktan sonra one hot vektörlere dönüştürüldü.
