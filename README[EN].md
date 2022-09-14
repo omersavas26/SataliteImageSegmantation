@@ -2,8 +2,7 @@
 # **BTK - Huawei Coding Marathon (2022 - AI)**
 ## **Project for segmentation of satellite imagery using artificial intelligence**
 
-# **Important Disclosure**
-I shared the problems that I encountered while trying to develop on Kaggle from the discord group. In the screen sharing I made with Mr. Alp, I showed him the situation. The biggest problem was not being able to pass the runtime to the GPU. While working on the CPU, I found inconsistencies such as the same code not working on different notebooks. Finally, I started to work in the Google Colab environment with the knowledge of  Mr. Alp (even though it cost me 1 day). This project was developed using the Google Colab environment.
+![donusum.png](https://github.com/omersavas26/SataliteImageSegmantation/raw/main/donusum.png)
 
 ### **Summary**
 
@@ -74,7 +73,7 @@ autoencoder = Model(input_img, decoded)
 autoencoder.compile(optimizer='adadelta', loss='binary_crossentropy')
 ```
 
-![autoencoderminimodelpredict.jpg](https://omersavas.com/dosya/autoencoderminimodelpredict.jpg)
+![autoencoderminimodelpredict.jpg](https://omersavas.com/dosya/huawei/autoencoderminimodelpredict.jpg)
 
 Then the model specified in source 2 was examined and a 
 depth was chosen between our mini autoencoder and the 
@@ -84,12 +83,12 @@ It is understood from the picture below that this model will be
 much more successful than the previous model after a few epochs 
 of training.
 
-![derinmodel](https://omersavas.com/dosya/derinmodel.jpg)
+![derinmodel](https://omersavas.com/dosya/huawei/model.png)
 
 As a result, the training was carried out and 
 continuous improvement was observed in the graphics.
 
-![grafik](https://omersavas.com/dosya/grafik.jpg)
+![grafik](https://omersavas.com/dosya/huawei/acc.png)
 
 #### **Which data preprocessing steps did you perform on the dataset? **
 Operations such as data reading, formatting, normalization were

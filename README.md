@@ -4,9 +4,6 @@
 
 ![donusum.png](https://github.com/omersavas26/SataliteImageSegmantation/raw/main/donusum.png)
 
-# **Önemli Açıklama**
-Kaggle da geliştirme yapmaya çalışırken karşılaştığım problemleri discord grubundan paylaşmıştım. Alp bey ile yaptığım ekran paylaşımında kendisine de durumu gösterdim. En büyük problem runtime ‘ı GPU ya geçirememekti. CPU üzerinde çalışırken de aynı kodun farklı notebook ‘lar da çalışmaması gibi tutarsızlıklar tespit ettim. En sonun da (1 günüme malolsa da) Alp beyin de bilgisi dahilinde Google Colab ortamında çalışmaya başladım. Bu proje Google Colab ortamı kullanılarak geliştirilmiştir.
-
 ### **Özet**
 
 Bu proje Ömer SAVAŞ tarafından geliştirilmiştir. Genel olarak Donanım/Zaman kısıtı dolayısı ile bilinçli olarak optimum derinlikte bir ağ oluşturulup kısıtlı bir eğitim gerçekleştirilmiştir. Daha derin bir ağ ile daha uzun süre eğitim gerçekleştirilir ise doğruluk daha da artacaktır. 
